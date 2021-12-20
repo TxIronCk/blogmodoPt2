@@ -8,8 +8,8 @@ import Feed from "./components/Feed.jsx";
 /*
   READ THESE COMMENTS AS A PART OF STEP TWO
 
-  To manage switching among the different views in this application, 
-  we have implemented a "view switcher" in the `App` component. 
+  To manage switching among the different views in this application,
+  we have implemented a "view switcher" in the `App` component.
 
   There are three key parts to the view switcher:
     1. The `view` property defined on the `App` component's `state`
@@ -17,7 +17,7 @@ import Feed from "./components/Feed.jsx";
     3. The `renderView` method defined on the `App` component
 
   The value of the `view` property will determine which gets returned by the
-  `renderView` method, which is invoked inside the `App` component's `render`. 
+  `renderView` method, which is invoked inside the `App` component's `render`.
   You can set the initial value of `view` in the `App` component's `constructor`
   function, determining what view gets rendered "by default".
 
@@ -31,14 +31,22 @@ import Feed from "./components/Feed.jsx";
   next steps of the assessment. When you're ready, return to the README.
 */
 
+//I need to use an axios request to connect the server to this component.
+//axios({
+//method: 'post',
+//url: '/api/blogs',
+//data:
+//});
+
 class App extends React.Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
       view: "feed",
     };
 
     this.changeView = this.changeView.bind(this);
+    this.renderView = this.renderView.bind(this);
   }
 
   changeView(option) {
@@ -56,6 +64,7 @@ class App extends React.Component {
       return <Post />;
     }
   }
+
   render() {
     return (
       <div>
@@ -67,7 +76,8 @@ class App extends React.Component {
             className={
               this.state.view === "feed" ? "nav-selected" : "nav-unselected"
             }
-            onClick={() => this.changeView("feed")}>
+            onClick={() => this.changeView("feed")}
+          >
             See all Posts
           </span>
           <span className="nav-unselected">Write a Post</span>

@@ -6,7 +6,7 @@ const samplePosts = [
     imageUrl: "https://source.unsplash.com/1600x900/?corgi",
     createdAt: "2017-11-14T05:57:26.037Z",
     body: `Apart from this first post, all of the posts in this set of sample data contain semi-pronouncable random gibberish.
-To generate this gibberish, we stitched together a bunch of paragraphs generated using the Chance.js library. Chance.js will allow you to programatically generate random bits of data, from blog posts to addresses to d20 rolls. You won't actually use Chance.js in this assignment, but we figured you would enjoy knowing just where the very strange words in the remaining sample data came from. 
+To generate this gibberish, we stitched together a bunch of paragraphs generated using the Chance.js library. Chance.js will allow you to programatically generate random bits of data, from blog posts to addresses to d20 rolls. You won't actually use Chance.js in this assignment, but we figured you would enjoy knowing just where the very strange words in the remaining sample data came from.
 We've provided this sample data as an aid to you in the first steps of building the client-side portion of this project. You should eventually replace this data with blog posts obtained from your database.`,
     views: 214,
   },
@@ -17,8 +17,8 @@ We've provided this sample data as an aid to you in the first steps of building 
     imageUrl: "https://source.unsplash.com/1600x900/?mountain,sunset",
     createdAt: "2017-11-13T03:30:26.037Z",
     body: `Bul gi addez mic abeahiza tilnor reja petiboca gu tetit wavvahigi mipcuf ben gizen vozin avojagu. For kojir bededa re getbo puf zet gib muvsanej vowpestij vuijdek re wat fatgimamo igo.
-Vapdonfa pin obcizto nounhof for hic ju boz il osegalu lumdurdeb fiw gomnec mi le vel. Popav lakcebobi raj mo uv panore lif ciw ito fud kanirged oza zivom gorec cucsoh fi bomeore ot. Tugkov moupusuj lisne nihcih ne givej rilzafko wucgu mijev hioc to filod peruclus ozug taego. Vo cinoru vef luriz datofgum amuje pavdahih ar vectu luvrem juw riz rubo os le hedwekdic. 
-Ahatim ame za goja oduhewe muptokih okubulbaj be dibup ijakesoze fizjum kuh ufo. Bitga ap make opodovfic gadi fowatsi hin got iv ez aca izila jignugos pajwak relugara acrala niknel. Kuvu fo tad eggop evakaha ihi zigvuw icarod sas he ezeda ut ot napna. Dugetuom og tu ac con cemize zohic ru je icitaedo ze harhu ca. 
+Vapdonfa pin obcizto nounhof for hic ju boz il osegalu lumdurdeb fiw gomnec mi le vel. Popav lakcebobi raj mo uv panore lif ciw ito fud kanirged oza zivom gorec cucsoh fi bomeore ot. Tugkov moupusuj lisne nihcih ne givej rilzafko wucgu mijev hioc to filod peruclus ozug taego. Vo cinoru vef luriz datofgum amuje pavdahih ar vectu luvrem juw riz rubo os le hedwekdic.
+Ahatim ame za goja oduhewe muptokih okubulbaj be dibup ijakesoze fizjum kuh ufo. Bitga ap make opodovfic gadi fowatsi hin got iv ez aca izila jignugos pajwak relugara acrala niknel. Kuvu fo tad eggop evakaha ihi zigvuw icarod sas he ezeda ut ot napna. Dugetuom og tu ac con cemize zohic ru je icitaedo ze harhu ca.
 Ron fasgadju acinu tos inulioj huwev zanoc pa gime zir nefsulu fu tonvo. Timgu afovefij weavoek fos be huacu casuvvit da zo kac vo lahi wuvorjif serawnog ob rakbi.`,
     views: 501,
   },

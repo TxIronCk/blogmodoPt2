@@ -1,10 +1,12 @@
 import React from "react";
+import samplePosts from "../sample_data.js";
 
 const Post = (props) => (
   <div className="post">
     <h1 className="post-title">This is a Hardcoded Blog Post Component</h1>
     <div className="post-byline">
-      <span className="post-byline-author">Ferd Zerding</span> 14 hours ago
+      <span className="post-byline-author">{samplePosts[0].author}</span> 14
+      hours ago
     </div>
     <img src="http://placecorgi.com/800/450" className="post-image" />
     <p>

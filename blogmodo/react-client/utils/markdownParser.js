@@ -23,6 +23,7 @@ const markdownParser = function (text) {
   if (contains(text, "*")) {
     <h1>{text}</h1>;
   }
+  return text;
 };
 
 export default markdownParser;
