@@ -1,6 +1,8 @@
 import React from "react";
 import samplePosts from "../sample_data.js";
 
+//this shouldbe a form that will accept client data and then take it to the database
+
 const Post = (props) => (
   <div className="post">
     <h1 className="post-title">This is a Hardcoded Blog Post Component</h1>

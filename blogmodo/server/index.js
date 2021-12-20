@@ -13,7 +13,9 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static(__dirname + "/../react-client/dist"));
 
 app.get("/api/blogs", function (req, res) {
-  //this should use the method created by the database to bring forth messages queried
+  //This should  contain a method that puts the data in the proper shape for the database.
+
+  //this should also use a method created by the database to bring forth messages queried
   //as well as other methods deeper into this Sprint to take care of the queries.
 
   res.json();

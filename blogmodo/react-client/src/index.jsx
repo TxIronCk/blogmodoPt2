@@ -31,7 +31,7 @@ import Feed from "./components/Feed.jsx";
   next steps of the assessment. When you're ready, return to the README.
 */
 
-//I need to use an axios request to connect the server to this component.
+//I need to use an axios request to connect the this component to the server.
 //axios({
 //method: 'post',
 //url: '/api/blogs',
