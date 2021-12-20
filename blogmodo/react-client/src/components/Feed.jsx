@@ -1,5 +1,6 @@
 import React from "react";
 import samplePosts from "../sample_data.js";
+import moment from "moment";
 console.log(samplePosts[0].author);
 
 //This should contain a 'map' function that will dynamically display the messages
@@ -14,8 +15,8 @@ const Feed = (props) => (
             {blog.title}
           </div>
           <div className="feed-list-item-byline">
-            <span className="feed-list-item-byline-author">{blog.author}</span>3
-            days ago
+            <span className="feed-list-item-byline-author">{blog.author}</span>
+            {moment().fromNow()}
           </div>
           <img
             src={blog.imageUrl}
