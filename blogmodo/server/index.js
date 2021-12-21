@@ -1,7 +1,7 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 
-const Blogs = require("../database-mongodb/Blog.js");
+const blogs = require("../database-mongodb/Blog.js");
 
 const app = express();
 const PORT = 3000;
@@ -14,6 +14,15 @@ app.use(express.static(__dirname + "/../react-client/dist"));
 
 app.get("/api/blogs", function (req, res) {
   //This should  contain a method that puts the data in the proper shape for the database.
+  blogs.getBlogMongo((err, results) => {
+    if (err) {
+      res.status(400).send(err);
+    } else {
+      console.log(results);
+      res.status(200).json(results);
+    }
+  });
+  // Blogs.getBlogMongo = (author, callback) {
 
   //this should also use a method created by the database to bring forth messages queried
   //as well as other methods deeper into this Sprint to take care of the queries.
