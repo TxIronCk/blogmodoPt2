@@ -1,7 +1,7 @@
 import React from "react";
 import samplePosts from "../sample_data.js";
 import moment from "moment";
-console.log(samplePosts[0].author);
+import App from "../index.jsx";
 
 //This should contain a 'map' function that will dynamically display the messages
 //I was able to use the samplePosts to display 'one' author...

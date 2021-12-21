@@ -16,19 +16,18 @@ app.get("/api/blogs", function (req, res) {
   //This should  contain a method that puts the data in the proper shape for the database.
   blogs.getBlogMongo((err, results) => {
     if (err) {
-      res.status(400).send(err);
+      return res.status(400).send(err);
     } else {
-      console.log(results);
-      res.status(200).json(results);
+      console.log("THESE ARE APP.GET RES: ", results);
+      return res.status(200).json(results);
     }
   });
-  // Blogs.getBlogMongo = (author, callback) {
 
   //this should also use a method created by the database to bring forth messages queried
   //as well as other methods deeper into this Sprint to take care of the queries.
 
-  res.json();
-  res.end();
+  // res.json();
+  // res.end();
 });
 
 app.post("/api/blogs", function (req, res) {});

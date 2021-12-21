@@ -1,6 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import $ from "jquery";
+import axios from "axios";
 
 import Post from "./components/Post.jsx";
 import Feed from "./components/Feed.jsx";
@@ -42,11 +43,26 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      view: "feed",
+      view: [],
     };
 
     this.changeView = this.changeView.bind(this);
     this.renderView = this.renderView.bind(this);
+    // this.getAllBlogs = this.getAllBlogs.bind(this);
+  }
+
+  componentDidMount() {
+    axios
+      .get("/api/blogs")
+      .then((results) => {
+        this.setState({
+          view: results.data,
+        });
+        console.log("STATE ", this.state);
+      })
+      .catch((error) => {
+        console.error("oops there was an error in getAllBlogs", error);
+      });
   }
 
   changeView(option) {
@@ -69,25 +85,25 @@ class App extends React.Component {
     return (
       <div>
         <div className="nav">
-          <span className="logo" onClick={() => this.changeView("feed")}>
+          <span className="logo" onClick={() => this.changeView({ view })}>
             BLOGMODO
           </span>
           <span
             className={
-              this.state.view === "feed" ? "nav-selected" : "nav-unselected"
+              this.state.view === this.view ? "nav-selected" : "nav-unselected"
             }
-            onClick={() => this.changeView("feed")}
+            onClick={() => this.changeView({ view })}
           >
             See all Posts
           </span>
           <span className="nav-unselected">Write a Post</span>
           <span className="nav-unselected">Admin</span>
         </div>
-
+        <Feed data={this.state} />
         <div className="main">{this.renderView()}</div>
       </div>
     );
   }
 }
-
+export default App;
 ReactDOM.render(<App />, document.getElementById("blogmodo"));
