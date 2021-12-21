@@ -9,7 +9,7 @@ import App from "../index.jsx";
 const Feed = (props) => (
   <div className="feed">
     <ul>
-      {samplePosts.map((blog) => (
+      {props.view.map((blog) => (
         <li key={blog._id} className="feed-list-item">
           <div className="feed-list-item-title" onClick={props.handleClick}>
             {blog.title}

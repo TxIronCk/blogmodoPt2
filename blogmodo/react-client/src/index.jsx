@@ -99,11 +99,11 @@ class App extends React.Component {
           <span className="nav-unselected">Write a Post</span>
           <span className="nav-unselected">Admin</span>
         </div>
-        <Feed data={this.state} />
+        <Feed {...this.state} />
         <div className="main">{this.renderView()}</div>
       </div>
     );
   }
 }
-export default App;
+
 ReactDOM.render(<App />, document.getElementById("blogmodo"));
